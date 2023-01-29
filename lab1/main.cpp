@@ -32,6 +32,7 @@ int main() {
     std::vector<Point> down;
     std::vector <Point> hull_up;
     std::vector <Point> hull_down;
+    std::vector <Point> hull;
 
     int x,y = 0;
     if (in.is_open())
@@ -90,12 +91,13 @@ int main() {
         }
     }
 
+    hull.insert(hull.begin(), hull_up.begin(), hull_up.end());
+    hull.insert(hull.end(), hull_down.begin(), hull_down.end());
+    in.close();
 
     for(Point n : hull){
         std::cout << n.x << "  " << n.y << std::endl;
     }
-
-    in.close();
     return 0;
 }
 
