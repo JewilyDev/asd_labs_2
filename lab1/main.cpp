@@ -91,7 +91,7 @@ int main() {
     }
 
 
-    for(Point n : hull_down){
+    for(Point n : hull){
         std::cout << n.x << "  " << n.y << std::endl;
     }
 
